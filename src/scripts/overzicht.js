@@ -18,7 +18,7 @@ export function initOverzicht(){
             var poster=  "https://image.tmdb.org/t/p/w500/" +overzichtElement.poster_path;
             var movieId= "index.html?movieId="+ overzichtElement.id;
             var block= `
-            <div class="col">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
             <div class="card">
               <img
                 class="card-img-top"
