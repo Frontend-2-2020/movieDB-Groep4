@@ -16,6 +16,7 @@ export function initOverzicht(){
             var release= overzichtElement.release_date;
             var score= overzichtElement.vote_average;
             var poster=  "https://image.tmdb.org/t/p/w500/" +overzichtElement.poster_path;
+            var movieId= "index.html?movieId="+ overzichtElement.id;
             var block= `
             <div class="col">
             <div class="card">
@@ -28,7 +29,7 @@ export function initOverzicht(){
                 <h5 class="card-title">${title}</h5>
                 <p class="card-text">Released: ${release}</p>
                 <p class="card-text">Score: ${score}</p>
-                <a href="#" class="btn btn-primary">Lets A Go</a>
+                <a href="${movieId}" class="btn btn-primary">Description</a>
               </div>
             </div>
           </div>`
