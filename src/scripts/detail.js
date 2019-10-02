@@ -9,6 +9,10 @@ export function initDetail() {
     "https://api.themoviedb.org/3/movie/550?api_key=dc37b97357fd291174e896aa7ce44636"
   ).then(function(response) {
     // handle success
-    console.log(response);
+    console.log(response.data);
+    document.getElementById("title").innerHTML = response.data.original_title;
+    document.getElementById("vote").innerHTML =
+      "Vote Average: " + response.data.vote_average;
+    document.getElementById("release").innerHTML = response.data.release_date;
   });
 }
