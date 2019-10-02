@@ -10,9 +10,22 @@ export function initDetail() {
   ).then(function(response) {
     // handle success
     console.log(response.data);
+
     document.getElementById("title").innerHTML = response.data.original_title;
     document.getElementById("vote").innerHTML =
       "Vote Average: " + response.data.vote_average;
-    document.getElementById("release").innerHTML = response.data.release_date;
+    document.getElementById("release").innerHTML =
+      "Release date: " + response.data.release_date;
+    document.getElementById("overview").innerHTML = response.data.overview;
+
+    const production = response.data.production_companies;
+    let prodHtml = "";
+
+    for (let index = 0; index < production.length; index++) {
+      const company = production[index];
+      prodHtml = prodHtml + " , " + company.name;
+    }
+
+    document.getElementById("production").innerHTML = prodHtml;
   });
 }
