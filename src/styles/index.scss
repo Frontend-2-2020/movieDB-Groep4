@@ -3,3 +3,11 @@ $body-color: blue;
 body {
   color: $body-color;
 }
+
+.jumbotron {
+  background-image: url("https://picsum.photos/seed/picsum/1300/400");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  margin: 10px;
+}
