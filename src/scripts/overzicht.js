@@ -8,10 +8,30 @@ export function initOverzicht(){
     .then(function(response){
         var overzichtMovieData=response.data.results;
         console.log(overzichtMovieData);
+        var allBlock="";
         for (let index = 0; index < overzichtMovieData.length; index++) {
             const overzichtElement = overzichtMovieData[index];
             console.log(overzichtElement);
-        }
+            var block= `
+            <div class="col">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="overzichtMovieData.poster_path"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">It part 2</h5>
+                <p class="card-text">21/09/2019</p>
+                <p class="card-text">9/10</p>
+                <a href="#" class="btn btn-primary">Lets A Go</a>
+              </div>
+            </div>
+          </div>`
+         allBlock+= block;
+        } 
+        var moviePage= document.querySelector("#moviePage");
+        moviePage.innerHTML= allBlock;
     })
     
 }
