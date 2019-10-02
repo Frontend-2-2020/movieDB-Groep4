@@ -1,4 +1,5 @@
 $body-color: blue;
+$text-color: white;
 
 body {
   color: $body-color;
@@ -19,4 +20,13 @@ body {
   padding: 20px;
   margin: 20px;
   border: 1px solid black;
+}
+
+h1,
+h3,
+h4,
+a,
+#production,
+button {
+  color: $text-color;
 }

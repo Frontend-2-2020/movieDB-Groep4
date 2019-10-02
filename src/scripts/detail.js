@@ -8,9 +8,12 @@ export function initDetail() {
   Axios.get(
     "https://api.themoviedb.org/3/movie/550?api_key=dc37b97357fd291174e896aa7ce44636"
   ).then(function(response) {
-    // handle success
     console.log(response.data);
 
+    document.getElementById("backdrop").style.backgroundImage =
+      "url('https://image.tmdb.org/t/p/w1280" +
+      response.data.backdrop_path +
+      "')";
     document.getElementById("title").innerHTML = response.data.original_title;
     document.getElementById("vote").innerHTML =
       "Vote Average: " + response.data.vote_average;
