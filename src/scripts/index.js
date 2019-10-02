@@ -11,7 +11,7 @@ const parsed = queryString.parse(location.search);
 
 //Enkel onderscheid tussen movie overzicht en detail
 if (parsed.movieId) {
-  initDetail();
+  initDetail(parsed.movieId);
 } else {
   initOverzicht();
 }
