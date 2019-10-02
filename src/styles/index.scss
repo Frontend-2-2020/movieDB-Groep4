@@ -10,4 +10,13 @@ body {
   background-size: cover;
   padding: 10px;
   margin: 10px;
+  height: 80vh;
+}
+
+.productionHouses {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid black;
 }
