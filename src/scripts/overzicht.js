@@ -12,18 +12,22 @@ export function initOverzicht(){
         for (let index = 0; index < overzichtMovieData.length; index++) {
             const overzichtElement = overzichtMovieData[index];
             console.log(overzichtElement);
+            var title= overzichtElement.title;
+            var release= overzichtElement.release_date;
+            var score= overzichtElement.vote_average;
+            var poster=  "https://image.tmdb.org/t/p/w500/" +overzichtElement.poster_path;
             var block= `
             <div class="col">
             <div class="card">
               <img
                 class="card-img-top"
-                src="overzichtMovieData.poster_path"
+                src="${poster}"
                 alt="Card image cap"
               />
               <div class="card-body">
-                <h5 class="card-title">It part 2</h5>
-                <p class="card-text">21/09/2019</p>
-                <p class="card-text">9/10</p>
+                <h5 class="card-title">${title}</h5>
+                <p class="card-text">Released: ${release}</p>
+                <p class="card-text">Score: ${score}</p>
                 <a href="#" class="btn btn-primary">Lets A Go</a>
               </div>
             </div>
