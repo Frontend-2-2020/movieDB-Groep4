@@ -1,7 +1,7 @@
-import '../styles/index.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "../styles/index.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 import queryString from "query-string";
-import { initOverzicht, initOverzicht } from './overzicht';
+import { initOverzicht } from './overzicht';
 import { initDetail } from './detail';
 
 //location.search = localhost:8080?moveId=200
