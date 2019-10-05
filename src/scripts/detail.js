@@ -28,9 +28,12 @@ export function initDetail(id) {
 
     for (let index = 0; index < production.length; index++) {
       const company = production[index];
-      prodHtml = prodHtml + " , " + company.name;
+      prodHtml = prodHtml + " -- " + company.name;
     }
 
     document.getElementById("production").innerHTML = prodHtml;
+
+    document.getElementById("poster").style.backgroundImage =
+      "url('https://image.tmdb.org/t/p/w500" + response.data.poster_path + "')";
   });
 }
