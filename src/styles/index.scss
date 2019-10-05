@@ -5,6 +5,7 @@ body {
   color: $body-color;
 }
 
+
 .jumbotron {
   background-image: url("https://picsum.photos/seed/picsum/1300/400");
   background-repeat: no-repeat;
@@ -29,4 +30,9 @@ a,
 #production,
 button {
   color: $text-color;
+}
+
+#bodyId .bgGradient{
+  background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(163,251,220,1) 25%, rgba(92,135,120,1) 35%, rgba(56,91,78,1) 50%, rgba(34,52,46,1) 65%, rgba(4,34,23,1) 75%, rgba(0,0,0,0.8914916308320203) 90%);
 }
