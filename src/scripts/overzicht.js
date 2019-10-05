@@ -19,7 +19,7 @@ export function initOverzicht(){
             var movieId= "index.html?movieId="+ overzichtElement.id;
             var block= `
             <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-            <div class="card">
+            <div class="card mb-4">
               <img
                 class="card-img-top"
                 src="${poster}"
