@@ -7,35 +7,28 @@
   </head>
 
   <body id="bodyId" class="bg-light">
-    <nav class="navbar navbar-light bg-dark justify-content-center bgGradient mb-4">
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-light bg-dark justify-content-center bgGradient mb-4"
+    >
       <a class="navbar-brand" href="http://localhost:8080/">
-        <p class="h1 py-4 font-weight-bold display-4">MovieDB!!!</p> 
+        <!-- <p class="h1 py-4 font-weight-bold display-4">TMDB!!!!</p> -->
+        <img
+          src="../src/images/tmdb_nobg.png"
+          width="125"
+          height="125"
+          alt=""
+        />
       </a>
     </nav>
+    <!-- HTML for the overview page  -->
     <div id="overzicht">
       <div class="container-fluid">
         <div class="row" id="moviePage"></div>
       </div>
     </div>
 
-    <!-- <div id="detail">
-      <div class="jumbotron" id="backdrop">
-        <h1 id="title" class="display-4 text-center">Movie title</h1>
-        <h3 id="vote" class="lead text-center">
-          Score: ***
-        </h3>
-        <h3 id="release"></h3>
-        <hr class="my-4 " />
-
-        <h4 id="overview"></h4>
-        <div class="text-center">
-          <a class="btn btn-outline-dark" href="#" role="button"
-            >See full movie details</a
-          >
-        </div>
-        <div id="production"></div>
-      </div>
-    </div> -->
+    <!-- HTML for the detail page -->
     <div id="detail">
       <div class="jumbotron" id="backdrop">
         <div class="infocontainer">
