@@ -1,5 +1,5 @@
 import Axios from "axios";
-
+// exporting function to be used by other js pages
 export function initOverzicht() {
   const detail = document.querySelector("#detail");
   detail.style.display = "none";
@@ -7,13 +7,14 @@ export function initOverzicht() {
   Axios.get(
     "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=5a01120a4a3594cd3fa817cfcb63a4e0"
   ).then(function(response) {
+    // Making variable database
     var overzichtMovieData = response.data.results;
-    console.log(overzichtMovieData);
+    // Making empty string to write in data
     var allBlock = "";
+    // Using for loop to cut our array to small objects
     for (let index = 0; index < overzichtMovieData.length; index++) {
       const overzichtElement = overzichtMovieData[index];
-      // remove console.log when done !
-      console.log(overzichtElement);
+      // Making var in the function since it can only exists in the function
       var title = overzichtElement.title;
       var release = overzichtElement.release_date;
       var score = overzichtElement.vote_average;
@@ -39,9 +40,20 @@ export function initOverzicht() {
               </div>
             </div>
           </div>`;
+          // Making sure that it our string keeps the previous data, by allBlock = allBlock+block or:
       allBlock += block;
     }
+    // Defining our var to write it into our page
     var moviePage = document.querySelector("#moviePage");
     moviePage.innerHTML = allBlock;
+  });
+}
+// Extra: Adding a smooth scroll to top button
+var toTop= document.querySelector("#toTop");
+toTop.onclick=function(){
+  window.scroll({
+    top: 0, 
+    left: 0, 
+    behavior: 'smooth'
   });
 }
