@@ -10,8 +10,6 @@ export function initDetail(id) {
       id +
       "?api_key=dc37b97357fd291174e896aa7ce44636"
   ).then(function(response) {
-    //remove console.log when done!
-    console.log(response.data);
     //fetching the required data and placeit into the HTML using .innerHTML
     document.getElementById("backdrop").style.backgroundImage =
       "url('https://image.tmdb.org/t/p/w1280" +
